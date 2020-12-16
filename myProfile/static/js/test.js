@@ -12,6 +12,6 @@ $(window).on('scroll', function(){
     debugger;
   
     if(bgPosition){
-      $('#app').css('background-position', 'center top +'+ bgPosition + 'px');
+      $('#top').css('background-position', 'center bottom -'+ bgPosition + 'px');
     }
 });
