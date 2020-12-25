@@ -11,6 +11,15 @@
     <script src="{% static 'js/test.js' %}"></script>
 </head>
 <body>
+    <div>
+        <ul class="menu-bar">
+            <li class="menu-item"><a id="contactLink" href="#">Contact</a></li>
+            <li class="menu-item"><a id="portfolioLink" href="#">Portfolio</a></li>
+            <li class="menu-item"><a id="skillLink" href="#">Skills</a></li>
+            <li class="menu-item"><a id="profileLink" href="#">Profile</a></li>
+            <li class="menu-item"><a id="topLink" href="#">Top</a></li>
+        </ul>
+    </div>
     <div id="top">
         <h1>To achieve goal, step one by one.</h1>
     </div>
@@ -23,7 +32,8 @@
             <tr>
                 <td>
                     一番ヶ瀬　俊季<br>
-                    1993年生まれ 神奈川県出身
+                    1993年生まれ 地球出身<br>
+                    地球内訳：柳川（福岡）・藤沢・Georgia(US)・西宮・仙台
                 </td>
             </tr>
             <tr>
@@ -33,42 +43,51 @@
             </tr>
         </table>
     </div>
-    <div id="skill" class="section">
-        <table>
+    <div id="skill" class="section horizontal-list-wrap">
+        <table class="align-center">
             <tr>
                 <th>
                     Skills    
                 </th>
             </tr>
+        </table>
+
+        <ul class="horizontal-list">
+            <li class="item align-center">
+                <p>Flutter / Dart</p>
+            </li>
+            <li class="item align-center">
+                <p>Django / python</p>
+            </li>
+            <li class="item align-center">
+                <p>ASP.net / C#</p>
+            </li>
+            <li class="item align-center">
+                <p>HTML / CSS</p>
+            </li>
+            <li class="item align-center">
+                <p>javascript / jQuery</p>
+            </li>
+        </ul>
+        
+    </div>
+    <div id="portfolio" class="section horizontal-list-wrap">
+        <table class="align-center">
             <tr>
-                <td>
-                    <ul class="horizontal-list">
-                        <li class="item align-center">
-                            <p>Flutter / Dart</p>
-                        </li>
-                        <li class="item align-center">
-                            <p>Django / python</p>
-                        </li>
-                        <li class="item align-center">
-                            <p>ASP.net / C#</p>
-                        </li>
-                        <li class="item align-center">
-                            <p>Html / CSS</p>
-                        </li>
-                        <li class="item align-center">
-                            <p>javascript / jQuery</p>
-                        </li>
-                    </ul>
-                </td>
+                <th>
+                    Portfolio    
+                </th>
             </tr>
         </table>
-        
+
+        <ul class="horizontal-list">
+            <li class="item align-center">
+                <p>Cue <br> ~Question Diary~</p>
+            </li>
+        </ul>
         
     </div>
-    <div id="portfolio" class="section">
-        Portfolio
-    </div>
-    <div id="contact" class="section">
+    <div name="contact" id="contact" class="section">
         Contact
     </div>
 </body>

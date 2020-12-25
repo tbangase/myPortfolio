@@ -2,11 +2,20 @@ body{
     margin: 0%;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
 .section {
     height: 70vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #top {
@@ -25,7 +34,7 @@ body{
     top: 50%;
     left: 50%;
     width: 100%;
-    padding:20px 20px;
+    padding: 20px 0px;
     text-align: center;
     color: #ffffff;
     font-size: 2em;
@@ -40,20 +49,46 @@ body{
     text-align: center;
 }
 
+/* ---------- Menu Bar ---------- */
+
+.menu-bar {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.menu-item {
+    padding: 15px;
+    display: block;
+    float: right;
+    color: white;
+    font-weight: 200;
+}
+
+/* --------- Horizontal List ---------- */
+.horizontal-list-wrap {
+    overflow: hidden;
+    height: 500px;
+}
+
 .horizontal-list {
     overflow-x: auto;
     white-space: nowrap;
-    /*-webkit-overflow-scrolling: touch;*/
-    
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 25px;
+    box-sizing: content-box;
 }
 
 .item {
     display: inline-block;
-    width: 300px;
+    width: 283px;
     height: 400px;
-
-    justify-content: center;
-
     margin: 16px;
     font-size: 24px;
     color: #ffffff;
