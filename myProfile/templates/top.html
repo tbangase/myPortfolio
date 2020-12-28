@@ -11,17 +11,29 @@
     <script src="{% static 'js/test.js' %}"></script>
 </head>
 <body>
-    <div>
+    <div id="menu-wrapper">
+        
+        <div class="menu-btn">
+            <span class="menu-line-top"></span>
+            <span class="menu-line-middle"></span>
+            <span class="menu-line-bottom"></span>
+        </div>
         <ul class="menu-bar">
-            <li class="menu-item"><a id="contactLink" href="#">Contact</a></li>
-            <li class="menu-item"><a id="portfolioLink" href="#">Portfolio</a></li>
-            <li class="menu-item"><a id="skillLink" href="#">Skills</a></li>
-            <li class="menu-item"><a id="profileLink" href="#">Profile</a></li>
+            <li></li>
             <li class="menu-item"><a id="topLink" href="#">Top</a></li>
+            <li class="menu-item"><a id="profileLink" href="#">Profile</a></li>
+            <li class="menu-item"><a id="skillLink" href="#">Skills</a></li>
+            <li class="menu-item"><a id="portfolioLink" href="#">Portfolio</a></li>
+            <li class="menu-item"><a id="contactLink" href="#">Contact</a></li>
         </ul>
+        
+        
     </div>
     <div id="top">
-        <h1>To achieve goal, step one by one.</h1>
+        <div id="top-pad">
+            <h1>To achieve goal, step one by one.</h1>
+        </div>
+        
     </div>
     <div id="profile" class="section">
         
@@ -43,14 +55,18 @@
             </tr>
         </table>
     </div>
-    <div id="skill" class="section horizontal-list-wrap">
-        <table class="align-center">
+    <div id="skill" class="spacer"></div>
+    <div class="title-wrap">
+        <table class="title">
             <tr>
                 <th>
                     Skills    
                 </th>
             </tr>
         </table>
+    </div>
+    <div class="section horizontal-list-wrap">
+        
 
         <ul class="horizontal-list">
             <li class="item align-center">
@@ -71,24 +87,53 @@
         </ul>
         
     </div>
-    <div id="portfolio" class="section horizontal-list-wrap">
-        <table class="align-center">
+    <div id="portfolio" class="spacer"></div>
+    <div class="title-wrap">
+        <table class="title">
             <tr>
                 <th>
                     Portfolio    
                 </th>
             </tr>
         </table>
-
+    </div>
+    <div class="section horizontal-list-wrap">
         <ul class="horizontal-list">
             <li class="item align-center">
                 <p>Cue <br> ~Question Diary~</p>
             </li>
         </ul>
-        
     </div>
-    <div name="contact" id="contact" class="section">
-        Contact
+    <div id="contact" class="spacer"></div>
+    <div>
+        <table class="title">
+            <tr>
+                <th>
+                    Contact
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="contact-section">
+        <div class="discription">お問い合わせはこちらからどうぞ</div>
+        <ul class="icon-list">
+            <li class="icon-item">Facebook</li>
+            <li class="icon-item">Twitter</li>
+            <li class="icon-item">Instagram</li>
+        </ul>
+        <form action="inquiry" method="post">
+            {% csrf_token %}
+            <div class="input-field">
+                <div class="input-wrap"><input class="input-box" type="text" name="name" id="name" placeholder="Name"></div>
+                <div class="input-wrap"><input class="input-box" type="email" name="email" id="email" placeholder="E-mail"></div>
+                <div class="input-wrap"><input class="input-box" type="text" name="title" id="title" placeholder="Title"></div>
+                <div class="input-wrap"><textarea class="input-box" name="contents" id="contents" rows="10" placeholder="contents"></textarea></div>
+                <div class="input-wrap"><input class="send-button" type="submit" value="Inquire"></div>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        <p>©2021 / Toshiki Ichibangase</p>
     </div>
 </body>
 </html>

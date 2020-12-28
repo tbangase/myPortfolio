@@ -1,6 +1,5 @@
 $(function() {
     function scrollToAnchor(id) {
-        debugger;
         var aTag = $(id);
         $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
     }
@@ -27,6 +26,10 @@ $(function() {
 
     $("#topLink").on('click', function(){
         scrollToAnchor('#top');
+    });
+
+    $(".menu-btn").on('click', function(){
+        $(".menu-bar").toggleClass('is-active');
     });
 });
 
