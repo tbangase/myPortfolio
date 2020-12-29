@@ -36,12 +36,20 @@ $(function() {
 $(window).on('scroll', function(){
 
     var scrollTop = $(window).scrollTop();
-    var bgPosition = scrollTop / 1.5;
+    var bgPosition = scrollTop / 1.2;
+    var skillPosTop = $('#skill-bg').position().top;
+    var skillBgPos = (scrollTop - skillPosTop) / 1.2;
+    var pfPosTop = $('#portfolio-bg').position().top;
+    var pfBgPos = (scrollTop - pfPosTop) / 1.2;
 
-  
     if(bgPosition){
       $('#top').css('background-position', 'center bottom -'+ bgPosition + 'px');
+      
     }
+
+    $('#portfolio-bg').css('background-position', 'center '+ pfBgPos + 'px');
+    $('#skill-bg').css('background-position', 'center '+ skillBgPos + 'px');
+    
 });
 
 

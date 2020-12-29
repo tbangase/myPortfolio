@@ -65,29 +65,29 @@
             </tr>
         </table>
     </div>
-    <div class="section horizontal-list-wrap">
-        
-
-        <ul class="horizontal-list">
-            <li class="item align-center">
-                <p>Flutter / Dart</p>
-            </li>
-            <li class="item align-center">
-                <p>Django / python</p>
-            </li>
-            <li class="item align-center">
-                <p>ASP.net / C#</p>
-            </li>
-            <li class="item align-center">
-                <p>HTML / CSS</p>
-            </li>
-            <li class="item align-center">
-                <p>javascript / jQuery</p>
-            </li>
-        </ul>
-        
+    <div id="skill-bg">
+        <div class="section horizontal-list-wrap">
+            <ul class="horizontal-list">
+                <li class="item align-center">
+                    <p>Flutter / Dart</p>
+                </li>
+                <li class="item align-center">
+                    <p>Django / python</p>
+                </li>
+                <li class="item align-center">
+                    <p>ASP.net / C#</p>
+                </li>
+                <li class="item align-center">
+                    <p>HTML / CSS</p>
+                </li>
+                <li class="item align-center">
+                    <p>javascript / jQuery</p>
+                </li>
+            </ul>
+        </div>
     </div>
     <div id="portfolio" class="spacer"></div>
+    
     <div class="title-wrap">
         <table class="title">
             <tr>
@@ -97,12 +97,14 @@
             </tr>
         </table>
     </div>
-    <div class="section horizontal-list-wrap">
-        <ul class="horizontal-list">
-            <li class="item align-center">
-                <p>Cue <br> ~Question Diary~</p>
-            </li>
-        </ul>
+    <div id="portfolio-bg">
+        <div class="section horizontal-list-wrap">
+            <ul class="horizontal-list">
+                <li class="item align-center">
+                    <p>Cue <br> ~Question Diary~</p>
+                </li>
+            </ul>
+        </div>
     </div>
     <div id="contact" class="spacer"></div>
     <div>
@@ -115,22 +117,24 @@
         </table>
     </div>
     <div class="contact-section">
-        <div class="discription">お問い合わせはこちらからどうぞ</div>
-        <ul class="icon-list">
-            <li class="icon-item">Facebook</li>
-            <li class="icon-item">Twitter</li>
-            <li class="icon-item">Instagram</li>
-        </ul>
-        <form action="inquiry" method="post">
-            {% csrf_token %}
-            <div class="input-field">
-                <div class="input-wrap"><input class="input-box" type="text" name="name" id="name" placeholder="Name"></div>
-                <div class="input-wrap"><input class="input-box" type="email" name="email" id="email" placeholder="E-mail"></div>
-                <div class="input-wrap"><input class="input-box" type="text" name="title" id="title" placeholder="Title"></div>
-                <div class="input-wrap"><textarea class="input-box" name="contents" id="contents" rows="10" placeholder="contents"></textarea></div>
-                <div class="input-wrap"><input class="send-button" type="submit" value="Inquire"></div>
-            </div>
-        </form>
+        <div class="contact-field">
+            <div class="discription">お問い合わせ</div>
+            <ul class="icon-list">
+                <li class="icon-item">Facebook</li>
+                <li class="icon-item">Twitter</li>
+                <li class="icon-item">Instagram</li>
+            </ul>
+            <form action="inquiry" method="post">
+                {% csrf_token %}
+                <div class="input-field">
+                    <div class="input-wrap"><input class="input-box" type="text" name="name" id="name" placeholder="Name"></div>
+                    <div class="input-wrap"><input class="input-box" type="email" name="email" id="email" placeholder="E-mail"></div>
+                    <div class="input-wrap"><input class="input-box" type="text" name="title" id="title" placeholder="Title"></div>
+                    <div class="input-wrap"><textarea class="input-box" name="contents" id="contents" rows="10" placeholder="contents"></textarea></div>
+                    <div class="input-wrap"><input class="send-button" type="submit" value="Inquire"></div>
+                </div>
+            </form>
+        </div>
     </div>
     <div id="footer">
         <p>©2021 / Toshiki Ichibangase</p>

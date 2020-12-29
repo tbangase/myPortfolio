@@ -12,6 +12,11 @@ html, body {
     font-family: YuGothic, "Yu Gothic";
 }
 
+h1 {
+    font-size: 2em;
+    padding: 0px 40px;
+}
+
 #top {
     position: relative;
     width: 100%;
@@ -34,9 +39,22 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
-h1 {
-    font-size: 2em;
-    padding: 0px 20px;
+#skill-bg {
+    width: 100%;
+    background-image: url("/static/img/bit_screen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 250%;
+}
+
+#portfolio-bg {
+    width: 100%;
+    background-image: url("/static/img/book_shelf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 250%;
 }
 
 #menu-wrapper {
@@ -66,13 +84,15 @@ h1 {
 }
 
 .contact-section {
-    height: 700px;
+    height: 750px;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: flex-start;
+    align-content: center;
     flex-wrap: wrap;
 }
+
+
 
 .discription {
     width: 100%;
@@ -217,11 +237,41 @@ h1 {
     margin: 16px;
     font-size: 24px;
     color: #ffffff;
-    background: rgba(38, 38, 38, 0.4);
+    background: rgba(0, 172, 252, 0.7);
     border-radius: 20px;
 }
 
+@media screen and (max-width: 600px) {
+    .horizontal-list-wrap {
+        overflow: hidden;
+        height: 330px;
+    }
+
+    .item {
+        display: inline-block;
+        width: 200px;
+        height: 282px;
+        margin: 16px;
+        font-size: 20px;
+        color: #ffffff;
+        background: rgba(0, 172, 252, 0.7);
+        border-radius: 20px;
+    }
+}
+
 /* ---------- Contact Form ----------- */
+.contact-field {
+    width: 500px;
+    background-color: skyblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+
 .input-field {
     width: 100%;
     display: flex;
@@ -241,10 +291,59 @@ h1 {
 
 .input-box {
     padding: 5px;
-    width: 50vw;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
 }
 
 .send-button{
     padding: 5px;
-    width: 51vw;
+    width: calc(400px + 10px);
+    border-radius: 10px;
+    border: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contact-field {
+        width: 60vw;
+        background-color: skyblue;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .input-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .input-wrap{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .input-box {
+        padding: 5px;
+        width: 50vw;
+        border-radius: 10px;
+        border: none;
+    }
+    
+    .send-button{
+        padding: 5px;
+        width: calc(50vw + 10px);
+        border-radius: 10px;
+        border: none;
+    }
 }
