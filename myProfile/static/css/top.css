@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    max-width: none;
 }
 
 a {
@@ -45,16 +46,16 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 250%;
+    background-size: auto 300%;
 }
 
 #portfolio-bg {
-    width: 100%;
+    width: auto;
     background-image: url("/static/img/book_shelf.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 250%;
+    background-size: auto 300%;
 }
 
 #menu-wrapper {
@@ -123,7 +124,7 @@ h1 {
 }
 
 .icon-item {
-    padding: 20px;
+    padding: 10px;
     float: left;
 }
 
@@ -215,6 +216,26 @@ h1 {
         font-weight: bold;
     }
 }
+
+/* ------------ Messages -------------- */
+.messages-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.messages {
+    list-style: none;
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+}
+
+.messages > li {
+    color: white;
+    font-size: large;
+}
+
 
 /* --------- Horizontal List ---------- */
 .horizontal-list-wrap {
